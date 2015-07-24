@@ -4,6 +4,7 @@
 gris_oscuro = #333333
 gris_claro = #818181
 rojo = #BD255B
+gris_mas_claro =#f0f0f0
 
 a
 	text-decoration none
@@ -16,6 +17,9 @@ figure
 	
 img
 	vertical-align top
+ul
+	margin 0
+	padding 0
 	
 //BUTTONS
 .button-menu
@@ -76,6 +80,17 @@ img
 .padding-tb
 	padding 1em 0
 
+.left
+	float left
+
+.right
+	float right
+	
+.wrap
+	width 1000px
+.round 
+	border-radius 50%
+	overflow hidden
 .progress
 	margin 1em 0
 	position relative
@@ -150,8 +165,70 @@ img
 	.playing
 		&.medium
 			width auto
-			
+.input
+	border 1px solid gris_claro
+	border-radius 5px
+	height 2.5em
+	padding 0 1em 0 2em
+.search-icon
+	color gris_claro
+	left .5em
+	position absolute
+	top .8em
+.close-icon
+	position absolute
+	top .5em
+	color gris_claro
+	right .5em
+	font-size 1.2em
+
 @media screen and (min-width:1000px)
 	
 	body
-		background red
+		background gris_mas_claro
+	.button-menu
+		display none
+	.menu
+		display block
+		background gris_mas_claro
+		overflow hidden
+		.item
+			float left
+			list-style none
+			
+			a
+				color gris_oscuro
+				text-transform uppercase
+				cursor pointer
+				padding 1em
+				display block
+				border-top 5px solid transparent
+				&:hover
+					border-top 5px solid gris_claro
+	.header
+		height auto
+		.title
+			display none
+			
+	.isotipo
+		width 122px
+	.logo
+		padding 1.3em 0
+		overflow hidden
+		background white
+	.avatar
+		width 38px
+		height 38px
+	.username
+		color gris_claro
+		position relative
+		top 9px
+		margin-left .5em
+		&:after
+			border-left 7px solid transparent 
+			border-right 7px solid transparent
+			border-top 9px solid gris_claro
+			content ""
+			display inline-block
+			margin-left .4em
+			
